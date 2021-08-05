@@ -11,8 +11,10 @@ steps:
 - task: ascentialtestrun@1
   inputs:
     atinstallpath: 'C:\Program Files (x86)\Zeenyx\AscentialTest'
+    projectpath: 'C:\'
     projectname: 
     runtype: 'testset'
+    runtypename: 'abash'
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
