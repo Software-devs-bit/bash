@@ -9,5 +9,5 @@ pool:
   name: Default
  
 steps:
-- bash:  echo Hello, world!
+- bash:  echo This is Pipeline $(var)
   displayName: 'Run a one-line script'
