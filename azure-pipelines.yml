@@ -5,33 +5,15 @@
 
 trigger:
 - master
+pool:
+name: Azure Pipelines
+ vmImage: windows-latest
+steps:
 - task: ascentialtestrun@1
   inputs:
     atinstallpath: 'C:\Program Files (x86)\Zeenyx\AscentialTest'
     projectname: 
     runtype: 'testset'
-
-pool:
-  vmImage: ubuntu-latest
-
-- task: ascentialtestrun@1
-  inputs:
-    atinstallpath: 'C:\Program Files (x86)\Zeenyx\AscentialTest'
-    projectpath: 'C:\Users\bash'
-    workingdirectory: 'C:\Users\bash'
-    projectname: 'bash-script.sh'
-    runtype: 'test'
-    runtypename: 'atest'
-    testsetoverview: true
-    testsummary: true
-    testsummaryattr: true
-    testsetdetail: true
-    reportpath: 'C:\Users'
-    reportformat: 'HTML'
-    outputlevel: 'Error'
-    targetcomputers: 'COMPUTER'
-
-steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
